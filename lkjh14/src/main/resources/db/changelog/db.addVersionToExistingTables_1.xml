@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+         
+		<changeSet author="fastCode, Inc" id="role100">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="role" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="role">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="tokenverification101">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="tokenverification" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="tokenverification">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="f_user102">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="f_user" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="f_user">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="jwt_entity103">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="jwt_entity" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="jwt_entity">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="userrole104">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="userrole" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="userrole">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="permission105">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="permission" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="permission">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="rolepermission106">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="rolepermission" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="rolepermission">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="userpermission107">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="userpermission" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="userpermission">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="test6108">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="test6" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="test6">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="userpreference109">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="userpreference" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="userpreference">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+	<changeSet author="fastCode, Inc" id="test4110">
+	    <preConditions onFail="MARK_RAN">
+        	<tableExists tableName="test4" schemaName="public"/>
+        </preConditions>
+	    <addColumn tableName="test4">
+	    	<column name="versiono" type="BIGINT" defaultValue="0">
+	      		<constraints nullable="false"/>
+			</column>
+	   	</addColumn>
+	</changeSet>
+         
+</databaseChangeLog>

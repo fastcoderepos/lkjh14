@@ -1,0 +1,44 @@
+package com.fastcode.lkjh14.addons.reporting.application.dashboardversionreport;
+
+import com.fastcode.lkjh14.addons.reporting.application.dashboard.dto.CreateDashboardOutput;
+import com.fastcode.lkjh14.addons.reporting.application.dashboardversionreport.dto.*;
+import com.fastcode.lkjh14.addons.reporting.application.report.dto.CreateReportOutput;
+import com.fastcode.lkjh14.addons.reporting.domain.dashboard.DashboardEntity;
+import com.fastcode.lkjh14.addons.reporting.domain.dashboardversionreport.DashboardversionreportId;
+import com.fastcode.lkjh14.addons.reporting.domain.report.ReportEntity;
+import com.fastcode.lkjh14.commons.search.SearchCriteria;
+import java.time.*;
+import java.util.List;
+import org.springframework.data.domain.Pageable;
+
+public interface IDashboardversionreportAppService {
+    CreateDashboardversionreportOutput create(CreateDashboardversionreportInput reportdashboard);
+
+    void delete(DashboardversionreportId reportdashboardId);
+
+    Boolean addReportsToDashboard(DashboardEntity dashboard, List<ReportEntity> reportsList);
+
+    UpdateDashboardversionreportOutput update(
+        DashboardversionreportId reportdashboardId,
+        UpdateDashboardversionreportInput input
+    );
+
+    FindDashboardversionreportByIdOutput findById(DashboardversionreportId reportdashboardId);
+
+    Boolean addReportsToDashboardRunningversion(CreateDashboardOutput dashboard, List<CreateReportOutput> reportsList);
+
+    Boolean addReportsToDashboardPublishedversion(
+        CreateDashboardOutput dashboard,
+        List<CreateReportOutput> reportsList
+    );
+
+    List<FindDashboardversionreportByIdOutput> find(SearchCriteria search, Pageable pageable) throws Exception;
+
+    DashboardversionreportId parseReportdashboardKey(String keysString);
+
+    //Dashboard
+    GetDashboardversionOutput getDashboard(DashboardversionreportId reportdashboardId);
+
+    //Report
+    GetReportOutput getReport(DashboardversionreportId reportdashboardId);
+}
